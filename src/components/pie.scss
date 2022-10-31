@@ -1,0 +1,81 @@
+//pie height
+$csspieheight: 20px;
+
+.pie-wrapper {
+  height: 20px;
+  width: 20px;
+  display: inline-block;
+  position: relative;
+  background:#E8505B;
+/*-webkit-box-shadow: 0px 0px 12px 0px rgba(255, 255, 255, 0.75);
+-moz-box-shadow: 0px 0px 12px 0px rgba(255, 255, 255, 0.75);
+box-shadow: 0px 0px 12px 0px rgba(255, 255, 255, 0.75);*/
+  border-radius:$csspieheight / 2;
+  //animation: glow 0.9s ease-in infinite;
+}
+
+.csspie {
+  position: absolute;
+  width: $csspieheight/2 ;
+  height: $csspieheight;
+  overflow: hidden;
+  
+  transform-origin: left center;
+
+  //the visible part of the pie
+  &:BEFORE {
+    content: "";
+    position: absolute;
+    width: $csspieheight / 2;
+    height: $csspieheight;
+    left: -($csspieheight / 2);
+    border-radius: ($csspieheight / 2) 0 0 ($csspieheight / 2);
+    
+    transform-origin: right center;
+  }
+ }
+
+//add color to pie pieces
+.csspie:BEFORE,.csspie:AFTER {
+  background-color: #DFDFDF;
+}
+
+//rotate the amount of the pie that's showing
+@for $i from 1 through 99 {
+  .csspie[data-value="#{$i}"]:BEFORE {
+ 
+    transform: rotate((#{$i * 3.6}deg));
+    transition:All 1s ease;
+  }
+}
+
+
+@for $i from 50 through 100 {
+.csspie[data-value="#{$i}"] {
+    width: $csspieheight;
+    height: $csspieheight;
+   
+    transform-origin: center center;
+
+    &:BEFORE {
+      left: 0px;
+    }
+    
+
+}
+}
+
+@for $i from 0 through 49 {
+.csspie[data-value="#{$i}"] {
+  left:$csspieheight*0.5;
+   }
+}
+
+
+
+@keyframes glow {
+  0% { box-shadow: 0px 0px 12px 0px rgba(255, 255, 255, 0.726); }
+  50% {  box-shadow: 0px 0px 18px 0px rgba(255, 255, 255, 0.75);}
+  75%{  box-shadow: 0px 0px 16px 0px rgba(255, 255, 255, 0.75);}
+  100%{  box-shadow: 0px 0px 14px 0px rgba(255, 255, 255, 0.75);}
+}

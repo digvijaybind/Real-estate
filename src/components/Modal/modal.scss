@@ -1,0 +1,74 @@
+@import "../../assert/colors.scss";
+.modelContainer {
+  .ant-modal-header {
+    background-color: var(--main-theme-color);
+
+    border-top-left-radius: 5px !important;
+    border-top-right-radius: 5px !important;
+    padding: 10px 24px;
+    text-align: center;
+  }
+
+  .ant-modal-title {
+    // color: #fff;
+    font-weight: 500;
+    font-size: 20px;
+    padding: 5px;
+    text-align: start;
+  }
+
+  .ant-modal-mask {
+    z-index: 100001 !important;
+  }
+
+  .ant-modal-wrap {
+    z-index: 1000016 !important;
+  }
+
+  .ant-modal-content {
+    border-radius: 5px !important;
+  }
+
+  .ant-modal-close{
+    position: absolute;
+    top: 6px;
+    right: 15px;
+  }
+
+  .ant-modal-close-x {
+    width: 42px;
+    height: 42px;
+    line-height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &:hover{
+      background: $greyBackground;
+      border-radius: 50px;
+    
+    }
+  }
+
+  .ant-modal-close-icon {
+    padding: 2px;
+    // background-color: #F94144;
+    border-radius: 15px;
+    font-size: 18px;
+    color: $black;
+  }
+  .modal-cancel {
+    border: 1px solid $primary;
+    background: $white;
+    margin: 0 10px;
+  }
+  .modal-footer{
+    padding: 10px;
+    border-top: 1px solid $fieldBorder;
+  }
+}
+
+.postModal .ant-modal-content {
+  .ant-modal-body {
+    padding: 0px;
+  }
+}

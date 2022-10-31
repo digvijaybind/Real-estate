@@ -1,0 +1,14 @@
+@font-face {
+  font-family: Roboto;
+  src: url("./asset/font/roboto/Roboto-Regular.ttf") format("ttf");
+
+  /* Safari, Android, iOS */
+}
+@font-face {
+  font-family: Merriweather;
+  src: url("./asset/font/merriweather/Merriweather-Bold.ttf") format(ttf);
+}
+@font-face {
+  font-family: Lato;
+  src: url("./asset/font/Lato2OFL/Lato2OFL/Lato-Regular.ttf") format(ttf);
+}
