@@ -1,4 +1,5 @@
-const Theme = {
+const Theme = 
+{
   white: "#ffffff",
   borderGray: "#A9A9A9",
   purple: "#673AB7;",
@@ -22,10 +23,10 @@ const Theme = {
 // const themeResposive = createTheme({
 //   breakpoints: {
 //     values: {
-//       xs: 0,
-//       sm: 640,
+//       xs: 480,
+//       sm: 768,
 //       md: 900,
-//       lg: 1200,
+//       lg: 1200,take 
 //       xl: 1536,
 //     },
 //   },

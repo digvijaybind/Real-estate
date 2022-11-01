@@ -10,16 +10,25 @@ const Container = styled("div")`
     #5f28b9 55.73%,
     #0c51a3 78.45%
   );
+  @media only screen and (min-width: 480px){
+
+  }
 `;
 const Wrapper = styled("div")`
   display: flex;
   justify-content: center;
+  @media only screen and (min-width: 480px){
+
+  }
 `;
 
 const SocialWrapper = styled("div")`
   display: flex;
   justify-content: space-between;
   padding: 19px 552px 85px 552px;
+  @media only screen and (min-width: 480px){
+
+  }
 `;
 const ImageWrapper = styled("img")`
   cursor: pointer;
@@ -27,6 +36,9 @@ const ImageWrapper = styled("img")`
   width: 36px;
   background-image: url(${(props) => props.img});
   margin-left: 40px;
+  @media only screen and (min-width: 480px){
+
+  }
 `;
 const LowerContainer = styled("div")`
   width: auto;
@@ -38,6 +50,9 @@ const LowerContainer = styled("div")`
     #5f28b9 55.73%,
     #0c51a3 78.45%
   );
+  @media only screen and (min-width: 480px){
+
+  }
 `;
 const LowerWrapper = styled("div")`
   display: flex;
@@ -46,6 +61,9 @@ const LowerWrapper = styled("div")`
   font-size: 14px;
   font-family: Roboto;
   color: #ffffff;
+  @media only screen and (min-width: 480px){
+
+  }
 `;
 export {
   Container,

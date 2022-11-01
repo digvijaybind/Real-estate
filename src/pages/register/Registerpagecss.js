@@ -1,8 +1,19 @@
 import { styled } from "@mui/material/styles";
 import { makeStyles } from "@material-ui/core/styles";
 import Theme from "../../asset/Theme";
-
+import Waveimage from "../../asset/image/Wave.svg";
 export const useStyles = makeStyles((theme) => ({
+  CreateAccount: {
+    fontFamily: "Merriweather",
+    fontWeight: "700",
+    fontSize: "30px",
+  },
+  Signup: {
+    fontFamily: " Lato",
+    fontWeight: "400",
+    fontSize: "18px",
+  },
+
   DetailsContainer: {},
   imageContainer: {
     width: "100%",
@@ -71,6 +82,11 @@ export const useStyles = makeStyles((theme) => ({
     display: "flex",
     alignItems: "center",
   },
+  Container: {
+    backgroundImage: "url(${Waveimage})",
+    width: "auto",
+    height: "100%",
+  },
   userInitial: {
     width: "40px",
     borderRadius: "100px",
@@ -126,7 +142,6 @@ export const useStyles = makeStyles((theme) => ({
   },
   leftDetails: {
     padding: "15px 25px 25px 80px",
-    textAlign: "left",
     [theme.breakpoints.down("xs")]: {
       padding: "15px !important",
     },
@@ -136,62 +151,28 @@ export const useStyles = makeStyles((theme) => ({
       width: "100%",
     },
   },
-  profiledetails: {
-    display: "flex",
-    justifyContent: "space-between",
-  },
-  profile: {
-    width: "455px",
-    display: "flex",
-    alignItems: "center",
-    flexDirection: "column",
-  },
-  logout: {
-    color: "#15BB58",
-  },
-  profileImg: {
-    borderRadius: "50%",
-    width: "200px",
-    height: "200px",
-  },
-  detailstext: {
-    fontSize: "24px",
-    color: "black",
-    fontWeight: "700",
-    marginTop: "35px",
-  },
-  detailsinfo: {
-    lineHeight: "17px",
-    fontSize: "14px",
-    color: "#888888",
-  },
-  detailsresp: {
-    lineHeight: "21px",
-    fontSize: "18px",
-  },
-  borndetails: {
-    textAlign: "center",
-  },
-  monthdetails: {
-    color: "white",
-    backgroundColor: "#666666",
-    borderRadius: "11px",
-    padding: "13px 8px 11px 14px",
-  },
-  passwordcolor: {
-    color: "#135AC3",
-    marginTop: "50px",
-  },
-  Cardbutton: {
-    color: "#029F8C",
-    width: "200px",
-    border: "3px solid",
-    cursor: "pointer",
-    height: "44px",
-    fontSize: "18px",
-    background: "rgba(255, 255, 255, 0.1)",
+  bedTitle: {
+    color: `${Theme.borderGray}`,
     fontFamily: "Lato",
-    borderRadius: "30px",
+    fontWeight: 400,
+    lineHeight: "19px",
+    paddingLeft: "10px",
+  },
+  available: {
+    color: `${Theme.borderGray}`,
+    fontFamily: "Lato",
+    fontWeight: 400,
+    lineHeight: "19px",
+    width: "24%",
+  },
+  bedOverview: {
+    fontWeight: 600,
+    fontSize: "20px",
+    lineHeight: "25px",
+    color: `${Theme.primarygray}`,
+  },
+  propertylists: {
+    marginBottom: "40px !important",
   },
   iconTitle: {
     display: "flex",
@@ -320,21 +301,125 @@ export const useStyles = makeStyles((theme) => ({
     padding: "5px 10px",
     marginLeft: "15px",
   },
-  investBtn: {
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-    marginLeft: "100px",
-    marginTop: "35px",
-    width: "145px",
-    height: "50px",
-    background: "linear-gradient(94.53deg, #34B841 18.01%, #029E8C 77.9%)",
+  Container: {
+    backgroundImage: "url(${Waveimage})",
+    width: "auto",
+    height: "100%",
+  },
+  loginBox: {
+    width: "30%",
+    textAlign: "center",
+    position: "relative",
+    left: "50%",
+    transform: "translate(-50%, 20%)",
+    padding: "20px",
+    backgroundColor: "white",
+    boxShadow: "0 0 20px 2px rgba(0, 0, 0, 0.4)",
     borderRadius: "30px",
+    textAlign: "left",
+    marginBottom: "180px",
+  },
+  logindetails: {
+    marginLeft: "35px",
+    marginRight: "15px",
+  },
+  googlebtn: {
     fontFamily: "Lato",
     fontStyle: "normal",
     fontWeight: "700",
     fontSize: "18px",
-    lineHeight: "22px",
+    borderRadius: "8px",
+    width: "100%",
+    height: "50px",
+    backgroundColor: "#135AC3",
+    cursor: "pointer",
+    color: "white",
+    border: "none",
+    marginBottom: "37px",
+  },
+  CreateMinute: {
+    fontFamily: "Lato",
+    fontStyle: "normal",
+    fontWeight: "400",
+    fontSize: "18px",
+    marginBottom: "19px",
+  },
+  AlreadyCreated: {
+    fontFamily: "Merriweather",
+    fontStyle: "normal",
+    fontWeight: "700",
+    fontSize: "18px",
+    marginRight: "10px",
+  },
+  LoginNow: {
+    fontFamily: "Merriweather",
+    fontStyle: "normal",
+    fontWeight: "700",
+    fontSize: "18px",
+    marginRight: "10px",
+    color: "#15BB58",
+  },
+  userdetails: {
+    display: "flex",
+    flexDirection: "row",
+  },
+  UserName: {
+    background: "#FFFFFF",
+    border: "1px solid #EAEAEA",
+    borderRadius: "6px",
+    width: "193px",
+    height: "50px",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  Email: {
+    background: "#FFFFFF",
+    border: "1px solid #EAEAEA",
+    borderRadius: "6px",
+    width: "193px",
+    height: "50px",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    marginLeft: "10px",
+  },
+  TitleName: {
+    fontFamily: "Lato",
+    fontStyle: "normal",
+    fontWeight: "500",
+    fontSize: "16px",
+    color: "#282828",
+  },
+  Downaccount: {
+    fontFamily: "Lato",
+    fontStyle: "normal",
+    fontWeight: "400",
+    fontSize: "16px",
+
+    color: "#444444",
+  },
+
+  investBtn: {
+    cursor: "pointer",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    // marginLeft: "100px",
+    // width: "280px",
+    // height: "50px",
+    // background: "linear-gradient(94.53deg, #34B841 18.01%, #029E8C 77.9%)",
+    // borderRadius: "30px",
+    // fontFamily: "Lato",
+    // fontStyle: "normal",
+    // fontWeight: "700",
+    // fontSize: "18px",
+    // lineHeight: "22px",
+    width: "166px",
+    height: "50px",
+
+    background: "linear-gradient(94.53deg, #34B841 18.01%, #029E8C 77.9%)",
+    borderRadius: "30px",
     /* identical to box height */
 
     color: "#FFFFFF",
@@ -344,6 +429,13 @@ export const useStyles = makeStyles((theme) => ({
       height: "38px",
       marginLeft: "15px",
     },
+  },
+  Buttonmang: {
+    display: "flex",
+    justifyContent: "flex-end",
+  },
+  termscondition: {
+    fontWeight: "600",
   },
   InvestContent: {
     fontFamily: "Lato",

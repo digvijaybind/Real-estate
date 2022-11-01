@@ -6,6 +6,9 @@ export const useStyles = makeStyles((theme) => ({
     top: "58px",
     left: "272px",
     padding: "5px",
+    [theme.breakpoints.down("xs")]: {
+      display: "block",
+    },
   },
   Register: {
     textTransform: "captalize",
@@ -17,6 +20,9 @@ export const useStyles = makeStyles((theme) => ({
       borderRadius: "22px",
       padding: "10px 18px 10px 18px",
     },
+    [theme.breakpoints.down("xs")]: {
+      display: "block",
+    },
   },
   Login: {
     textTransform: "captalize",
@@ -27,12 +33,18 @@ export const useStyles = makeStyles((theme) => ({
       padding: "10px 18px 10px 18px",
       borderRadius: "22px",
     },
+    [theme.breakpoints.down("xs")]: {
+   
+    },
   },
   List: {
     color: "#fff",
     cursor: "pointer",
     marginLeft: "10px",
     fontSize: "18px",
+    [theme.breakpoints.down("xs")]: {
+   
+    },
   },
   title: {
     color: "#BCCAD3",
@@ -54,9 +66,10 @@ const Container = styled("div")`
   display: flex;
   align-items: center;
   flexwrap: "wrap";
-  @media (max-width: 600px) {
+  @media (max-width: 480px) {
     height: 113px;
   }
+
 `;
 
 const Wrapper = styled("div")`
@@ -67,10 +80,13 @@ const Wrapper = styled("div")`
   align-items: center;
   width: 100%;
   padding: 0 60px 0 60px;
-  @media (max-width: 600px) {
+  @media (max-width: 480px) {
     flexwrap: "wrap !important";
     padding: "17px 18px 0 20px !important";
     backgroundcolor: "red";
+  }
+  @media only screen and (min-width: 768px){
+
   }
 `;
 
@@ -79,6 +95,9 @@ const LeftMenu = styled("div")`
   justify-content: space-between;
   align-items: center;
   flex-direction: row;
+  @media only screen and (min-width: 480px){
+
+  }
 `;
 
 const RightMenu = styled("div")`
@@ -98,6 +117,9 @@ Button{
       background: "blue",
    }
   }
+  @media only screen and (min-width: 480px){
+
+  }
 `;
 
 const RightMenutitle = styled("div")`
@@ -111,11 +133,17 @@ const RightMenutitle = styled("div")`
     box-shadow: 0px 2px 0px rgba(19, 90, 195, 0.4);
     border-radius: 22px;
   }
+  @media only screen and (min-width: 480px){
+
+  }
 `;
 
 const LogonameWrapper = styled("div")`
   display: flex;
   justify-content: space-between;
+  @media only screen and (min-width: 480px){
+
+  }
 `;
 const Logo = styled("img")`
   cursor: pointer;
@@ -123,6 +151,9 @@ const Logo = styled("img")`
   width: 20px;
   background-image: url(${(props) => props.img});
   margin-right: 10px;
+  @media only screen and (min-width: 480px){
+
+  }
 `;
 const Name = styled("div")`
   font-size: 26px;
@@ -131,6 +162,9 @@ const Name = styled("div")`
   cursor: pointer;
   margin-right: 30px;
   color: #ffffff;
+  @media only screen and (min-width: 480px){
+
+  }
 `;
 
 const Menubartitle = styled("div")`
@@ -140,6 +174,9 @@ const Menubartitle = styled("div")`
   cursor: pointer;
   margin-right: 30px;
   color: "#BCCAD3" !important;
+  @media only screen and (min-width: 480px){
+
+  }
 `;
 const menubarList = styled("div")`
   font-family: Roboto;
@@ -148,6 +185,9 @@ const menubarList = styled("div")`
   font-size: 16px;
   line-height: 19px;
   color: #fff !important;
+  @media only screen and (min-width: 480px){
+
+  }
 `;
 const Buytoken = styled("button")`
   width: 150px;
@@ -156,11 +196,17 @@ const Buytoken = styled("button")`
   cursor: pointer;
   display: flex;
   justify-content: center;
+  @media only screen and (min-width: 480px){
+
+  }
 `;
 const buttontitle = styled("div")`
   font-family: Roboto;
   font-size: 16px;
   color: #fff;
+  @media only screen and (min-width: 480px){
+
+  }
 `;
 
 export {
