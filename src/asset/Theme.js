@@ -1,5 +1,4 @@
-const Theme = 
-{
+const Theme = {
   white: "#ffffff",
   borderGray: "#A9A9A9",
   purple: "#673AB7;",
@@ -19,6 +18,7 @@ const Theme =
   primaryBlue: "#1A2163",
   filterGray: "#888888",
   darkOrange: "#DE8722",
+  primaryPurple: "#703FC1",
 };
 // const themeResposive = createTheme({
 //   breakpoints: {
@@ -26,10 +26,10 @@ const Theme =
 //       xs: 480,
 //       sm: 768,
 //       md: 900,
-//       lg: 1200,take 
+//       lg: 1200,take
 //       xl: 1536,
 //     },
 //   },
 // });
 
-export default { Theme };
+export default Theme;

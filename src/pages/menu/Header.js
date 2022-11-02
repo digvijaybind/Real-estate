@@ -176,18 +176,26 @@ export const Header = () => {
           </menubarList>
         </LeftMenu>
         <RightMenu>
- 
-        <div className={classes.profilemang}>
-          <AccountCircleIcon />
-        { <div className={classes.titleprofile}>Register</div>}
-          </div>
-          {!["/loginpage", "/profilepage", "/registerpage"].includes(
+          {["/loginpage", "/registerpage"].includes(
             window.location.pathname
           ) && (
-            <>
-              <Button className={classes.Register}>Register</Button>
-              <Button className={classes.Login}>Login</Button>
-            </>
+            <div className={classes.profilemang}>
+              <AccountCircleIcon />
+            </div>
+          )}
+          {window.location.pathname === "/registerpage" && (
+            <Button className={classes.Register}>Register</Button>
+          )}
+          {window.location.pathname === "/loginpage" && (
+            <Button className={classes.Login}>Login</Button>
+          )}
+          {window.location.pathname === "/profilepage" && (
+            <div>
+              <div className={classes.profilemang}>
+                <div className={classes.userInitial}>BA</div>
+                <div className={classes.userName}>Binse Abrah ...</div>
+              </div>
+            </div>
           )}
         </RightMenu>
       </Wrapper>

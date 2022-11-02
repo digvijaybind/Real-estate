@@ -33,9 +33,7 @@ export const useStyles = makeStyles((theme) => ({
       padding: "10px 18px 10px 18px",
       borderRadius: "22px",
     },
-    [theme.breakpoints.down("xs")]: {
-
-    },
+    [theme.breakpoints.down("xs")]: {},
   },
   titleprofile: {
     fontFamily: "Roboto",
@@ -55,9 +53,7 @@ export const useStyles = makeStyles((theme) => ({
     cursor: "pointer",
     marginLeft: "10px",
     fontSize: "18px",
-    [theme.breakpoints.down("xs")]: {
-
-    },
+    [theme.breakpoints.down("xs")]: {},
   },
   profilemang: {
     display: "flex",
@@ -68,6 +64,21 @@ export const useStyles = makeStyles((theme) => ({
     color: "#BCCAD3",
     cursor: "pointer",
     fontSize: "22px",
+  },
+  userInitial: {
+    background: `${Theme.primaryPurple}`,
+    padding: "10px",
+    borderRadius: "50px",
+    color: "white",
+    width: "25px",
+    height: "25px",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  userName: {
+    color: `${Theme.primaryPurple}`,
+    paddingLeft: "15px",
   },
 }));
 
@@ -112,7 +123,6 @@ const LeftMenu = styled("div")`
   align-items: center;
   flex-direction: row;
   @media only screen and (min-width: 480px) {
-
   }
 `;
 
@@ -134,8 +144,6 @@ const RightMenu = styled("div")`
     }
   }
   @media only screen and (min-width: 480px) {
-
-
   }
 `;
 
@@ -151,9 +159,6 @@ const RightMenutitle = styled("div")`
     border-radius: 22px;
   }
   @media only screen and (min-width: 480px) {
-
-
-
   }
 `;
 
@@ -170,8 +175,6 @@ const Logo = styled("img")`
   background-image: url(${(props) => props.img});
   margin-right: 10px;
   @media only screen and (min-width: 480px) {
-
-
   }
 `;
 const Name = styled("div")`
@@ -182,8 +185,6 @@ const Name = styled("div")`
   margin-right: 30px;
   color: #ffffff;
   @media only screen and (min-width: 480px) {
-
-    
   }
 `;
 
