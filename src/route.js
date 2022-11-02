@@ -10,9 +10,11 @@ import Profile from "./pages/profile/Profile";
 import Commonbutton from "./components/commonButton/Commonbutton";
 import Register from "./pages/register/Register";
 import Login from "./pages/login/Login";
+import ListProperty from "./pages/ListingProperty/ListingProperty";
 import "./index.css";
 
 export default function Router() {
+  console.log(window.location.pathname, "windows.location.path");
   return (
     <div>
       <BrowserRouter>
@@ -22,11 +24,14 @@ export default function Router() {
           <Route path="/profilepage" element={<Profile />} exact />
           <Route path="/registerpage" element={<Register />} exact />
           <Route path="/loginpage" element={<Login />} exact />
+          <Route path="/listpropertypage" element={<ListProperty />} exact />
           <Route path="/Investnow" element={<Investnow />} exact />
           <Route path="/detailspage" element={<DetailsPage />} exact />
           <Route path="/card" element={<Card />} exact />
         </Routes>
-        <Footer />
+        {!["/loginpage", "/profilepage", "/registerpage"].includes(
+          window.location.pathname
+        ) && <Footer />}
       </BrowserRouter>
     </div>
   );

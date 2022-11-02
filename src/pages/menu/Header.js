@@ -10,6 +10,7 @@ import Divider from "@mui/material/Divider";
 import ArchiveIcon from "@mui/icons-material/Archive";
 import FileCopyIcon from "@mui/icons-material/FileCopy";
 import MoreHorizIcon from "@mui/icons-material/MoreHoriz";
+import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 
@@ -107,52 +108,63 @@ export const Header = () => {
             <Logo img={Companylogo} />
             <Name> Blits Estates</Name>
           </LogonameWrapper>
+          {!["/loginpage", "/profilepage", "/registerpage"].includes(
+            window.location.pathname
+          ) && (
+            <>
+              <Menubartitle className={classes.title}>Marketplace</Menubartitle>
+            </>
+          )}
 
-          <Menubartitle className={classes.title}>Marketplace</Menubartitle>
+          {!["/loginpage", "/profilepage", "/registerpage"].includes(
+            window.location.pathname
+          ) && (
+            <>
+              <Button
+                id="demo-customized-button"
+                aria-controls={open ? "demo-customized-menu" : undefined}
+                aria-haspopup="true"
+                aria-expanded={open ? "true" : undefined}
+                disableElevation
+                onClick={handleClick}
+                endIcon={<KeyboardArrowDownIcon />}
+                style={{
+                  color: "#BCCAD3",
+                  textTransform: "capitalize",
+                  marginRight: "8px",
+                  fontSize: "18px",
+                }}
+              >
+                About
+              </Button>
+              <StyledMenu
+                id="demo-customized-menu"
+                MenuListProps={{
+                  "aria-labelledby": "demo-customized-button",
+                }}
+                anchorEl={anchorEl}
+                open={open}
+                onClose={handleClose}
+              >
+                <MenuItem onClick={handleClose} disableRipple>
+                  About Bills_Estate
+                </MenuItem>
+                <MenuItem onClick={handleClose} disableRipple>
+                  What is Blits Token?
+                </MenuItem>
 
-          <Button
-            id="demo-customized-button"
-            aria-controls={open ? "demo-customized-menu" : undefined}
-            aria-haspopup="true"
-            aria-expanded={open ? "true" : undefined}
-            disableElevation
-            onClick={handleClick}
-            endIcon={<KeyboardArrowDownIcon />}
-            style={{
-              color: "#BCCAD3",
-              textTransform: "capitalize",
-              marginRight: "8px",
-              fontSize: "18px",
-            }}
-          >
-            About
-          </Button>
-          <StyledMenu
-            id="demo-customized-menu"
-            MenuListProps={{
-              "aria-labelledby": "demo-customized-button",
-            }}
-            anchorEl={anchorEl}
-            open={open}
-            onClose={handleClose}
-          >
-            <MenuItem onClick={handleClose} disableRipple>
-              About Bills_Estate
-            </MenuItem>
-            <MenuItem onClick={handleClose} disableRipple>
-              What is Blits Token?
-            </MenuItem>
-
-            <MenuItem onClick={handleClose} disableRipple>
-              How to Buy Blits Token?
-            </MenuItem>
-            <MenuItem onClick={handleClose} disableRipple>
-              Tokenomics
-            </MenuItem>
-            <MenuItem onClick={handleClose} disableRipple>
-              FAQ's
-            </MenuItem>
-          </StyledMenu>
+                <MenuItem onClick={handleClose} disableRipple>
+                  How to Buy Blits Token?
+                </MenuItem>
+                <MenuItem onClick={handleClose} disableRipple>
+                  Tokenomics
+                </MenuItem>
+                <MenuItem onClick={handleClose} disableRipple>
+                  FAQ's
+                </MenuItem>
+              </StyledMenu>
+            </>
+          )}
           <Commonbutton
             btnName=" Buy Blits coins"
             bgButton="green"
@@ -164,8 +176,19 @@ export const Header = () => {
           </menubarList>
         </LeftMenu>
         <RightMenu>
-          <Button className={classes.Register}>Register</Button>
-          <Button className={classes.Login}>Login</Button>
+ 
+        <div className={classes.profilemang}>
+          <AccountCircleIcon />
+        { <div className={classes.titleprofile}>Register</div>}
+          </div>
+          {!["/loginpage", "/profilepage", "/registerpage"].includes(
+            window.location.pathname
+          ) && (
+            <>
+              <Button className={classes.Register}>Register</Button>
+              <Button className={classes.Login}>Login</Button>
+            </>
+          )}
         </RightMenu>
       </Wrapper>
     </Container>

@@ -1,12 +1,12 @@
 import React from "react";
 import Container from "react-bootstrap/Container";
-import { Navbar,  Nav, Navbar } from "react-bootstrap";
+import { Navbar, Nav, Navbar } from "react-bootstrap";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import "../components/Header.css";
 
 // type Props = {};
 
-const Header = (props: Props) => {
+const Header = (props) => {
   return (
     <header className="header">
       <div className="container">

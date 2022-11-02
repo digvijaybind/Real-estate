@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useStyles } from "./Loginpagecss";
 import styled from "styled-components";
 import Waveimage from "../../asset/image/Wave.svg";
-
+import GoogleIcon from "@mui/icons-material/Google";
 const Input = styled.input`
   display: block;
   padding: 12px;
@@ -40,7 +40,7 @@ const Login = () => {
           <h1 className={classes.CreateAccount}>Welcome back</h1>
           <p className={classes.Signup}>Login with your google account</p>
           <button type="submit" className={classes.googlebtn}>
-            <i class="fab fa-google me-2"></i>Continue with Google
+          <div className={classes.buttonmang}> <GoogleIcon className={classes.googlebutton} /> Continue with Google</div> 
           </button>
           <p className={classes.CreateMinute}>
             Or login with your email and password.

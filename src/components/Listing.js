@@ -6,9 +6,8 @@ import  '../pie.min.css'
 import '../components/ListingPage.css'
 
 
-type Props = {}
 
-const Listing = (props: Props) => {
+const Listing = (props) => {
   return (
 <>
 

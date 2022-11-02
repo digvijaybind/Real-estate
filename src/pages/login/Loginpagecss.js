@@ -330,6 +330,10 @@ export const useStyles = makeStyles((theme) => ({
     marginRight: "15px",
   },
   googlebtn: {
+    fontFamily: "Lato",
+    fontStyle: "normal",
+    fontWeight: "700",
+    fontSize: "18px",
     borderRadius: "8px",
     width: "100%",
     height: "50px",
@@ -338,6 +342,16 @@ export const useStyles = makeStyles((theme) => ({
     color: "white",
     border: "none",
     marginBottom: "37px",
+  },
+  googlebutton: {
+    width: "19px !important",
+    height: "24px !important",
+    marginRight: "10px !important",
+  },
+  buttonmang: {
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
   },
   CreateMinute: {
     fontFamily: "Lato",
@@ -442,7 +456,7 @@ export const useStyles = makeStyles((theme) => ({
     fontStyle: "normal",
     fontWeight: "500",
     fontSize: "16px",
-
+    cursor: "pointer",
     color: "#CA2D16",
   },
   Remeber: {

@@ -312,17 +312,14 @@ export const useStyles = makeStyles((theme) => ({
     position: "relative",
     left: "50%",
     transform: "translate(-50%, 20%)",
-    padding: "20px",
+    padding: "20px 25px",
     backgroundColor: "white",
     boxShadow: "0 0 20px 2px rgba(0, 0, 0, 0.4)",
     borderRadius: "30px",
     textAlign: "left",
     marginBottom: "180px",
   },
-  logindetails: {
-    marginLeft: "35px",
-    marginRight: "15px",
-  },
+  logindetails: {},
   googlebtn: {
     fontFamily: "Lato",
     fontStyle: "normal",
@@ -335,7 +332,20 @@ export const useStyles = makeStyles((theme) => ({
     cursor: "pointer",
     color: "white",
     border: "none",
-    marginBottom: "37px",
+
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  googlebutton: {
+    width: "19px !important",
+    height: "24px !important",
+    marginRight: "10px !important",
+  },
+  buttonmang: {
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
   },
   CreateMinute: {
     fontFamily: "Lato",

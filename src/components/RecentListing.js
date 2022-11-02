@@ -8,9 +8,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import Listing from "./Listing";
 
-type Props = {};
-
-function RecentListing({}: Props) {
+function RecentListing() {
   return (
     <div>
       <Swiper

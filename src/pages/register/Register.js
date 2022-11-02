@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useStyles } from "./Registerpagecss";
 import styled from "styled-components";
 import Waveimage from "../../asset/image/Wave.svg";
+import GoogleIcon from "@mui/icons-material/Google";
 const Input = styled.input`
   display: block;
   padding: 12px;
@@ -36,8 +37,7 @@ const Register = () => {
           <h1 className={classes.CreateAccount}>Create a Account</h1>
           <p className={classes.Signup}>Signup with your google account</p>
           <button type="submit" className={classes.googlebtn}>
-            <AiOutlineGoogle />
-            Continue with Google
+          <div className={classes.buttonmang}> <GoogleIcon className={classes.googlebutton} /> Continue with Google</div> 
           </button>
           <p className={classes.CreateMinute}>
             Or get it created in less than a minute
